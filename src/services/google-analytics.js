@@ -37,7 +37,8 @@ exports.initializeGoogleAnalytics = (options) => {
 
     window.gtag('config', options.trackingId, {
       'anonymize_ip': gaAnonymize,
-      'allow_google_signals': gaAllowAdFeatures
+      'allow_google_signals': gaAllowAdFeatures,
+      'cookie_flags': 'SameSite = None; Secure'
     })
 
     window.gatsbyPluginGDPRCookiesGoogleAnalyticsInitialized = true
